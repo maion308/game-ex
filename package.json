@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Free public database for gamer reviews where all can contribute",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
