@@ -13,26 +13,6 @@
     <title>GamEXpedia</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li class="menu-items">
-            <a href="">
-                <span class="material-symbols-outlined">
-                    home
-                </span>
-            </a>
-            </li>
-            <input type="hidden" name="search-input">
-            <label for="search-input"></label>
-            <li class="menu-items">
-            <a href="search">
-                <span class="material-symbols-outlined">
-                search
-                </span>
-            </a>
-            </li>
-        </ul>
-    </nav>
 <header>
     <h1 class="header-title">GamEXpedia</h1>
 </header>
@@ -47,9 +27,24 @@
                             <img class="game-img" src="<%= game.img %>" alt="">
                         </div>
                         <p 
-                        class="game-review">
+                        class="game-review">&emsp;
                         <%= review.review %>
-                        <p class="game-review">Score: <%= review.rating %></p>
+                        <hr>
+                        <h3>Score: 
+                            <% if(review.rating >= 8) { %>
+                                <span class="game-rating-high">
+                                    <%= review.rating %> / 10
+                                </span>
+                            <% } else if(review.rating <= 5) { %>
+                                <span class="game-rating-low">
+                                    <%= review.rating %> / 10
+                                </span>
+                            <% } else { %>
+                                <span class="game-rating-med">
+                                    <%= review.rating %> / 10
+                                </span>
+                            <% } %>
+                        </h3>
                     </div>
                 <% } %>
             <% } %>
