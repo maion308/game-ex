@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/ea79a2e543.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>GamEXpedia</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="menu-items">
+            <a href="">
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+            </a>
+            </li>
+            <input type="hidden" name="search-input">
+            <label for="search-input"></label>
+            <li class="menu-items">
+            <a href="search">
+                <span class="material-symbols-outlined">
+                search
+                </span>
+            </a>
+            </li>
+        </ul>
+    </nav>
+<header>
+    <h1 class="header-title">GamEXpedia</h1>
+</header>
+<main>
+    <section class="game-list-section">
+        <% for(const review of reviews) { %>
+            <% for(const game of gameList) { %>
+                <% if(review.gameTitle == game.name) { %>
+                    <div class="game-list-container">
+                        <h1 class="game-title"><%= review.gameTitle %></h1>
+                        <div class="img-container">
+                            <img class="game-img" src="<%= game.img %>" alt="">
+                        </div>
+                        <p 
+                        class="game-review">
+                        <%= review.review %>
+                        <p class="game-review">Score: <%= review.rating %></p>
+                    </div>
+                <% } %>
+            <% } %>
+        <% } %>
+    </section>
+    <section class="divider-headline">
+            <h1>Help Us Build</h1>
+    </section>
+    <section class="game-input-section">
+        <form action="/" class="game-input-form" method="post">
+            <label for="gameTitle">Game</label>
+            <select name="gameTitle" id="game-title" required>
+                    <option value="" >select-one</option>
+                <% for(game of gameList) { %>
+                    <option value="<%= game.name %>"><%= game.name %></option>
+                <% } %>
+            </select>
+            <textarea 
+            class="game-review-input" 
+            name="review" 
+            cols="30" 
+            rows="10" 
+            placeholder="Give us your take"
+            required
+            ></textarea>
+            <label for="rating">Rating:</label>
+                <select name="rating" id="rating" required>
+                    <option value="">select-one</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+<footer>
+    <ul>
+        <li>GamEXpedia All Rights Reserved &copy; Michael Ion</li>
+    </ul>
+</footer>
+
+</body>
+</html>
