@@ -26,9 +26,12 @@
                         <div class="img-container">
                             <img class="game-img" src="<%= game.img %>" alt="">
                         </div>
-                        <p 
-                        class="game-review">&emsp;
-                        <%= review.review %>
+                        <div class="review-container">
+                            <p 
+                            class="game-review-content">&emsp;
+                            <%= review.review %>
+                            </p>
+                        </div>
                         <hr>
                         <h3>Score: 
                             <% if(review.rating >= 8) { %>

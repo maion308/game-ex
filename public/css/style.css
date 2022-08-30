@@ -137,12 +137,17 @@
          object-fit: contain;
      }
 
-     .game-review {
-        /* font-family: 'Roboto', sans-serif; */
+     .review-container {
+         display: flex;
+         flex-direction: row wrap;
+         justify-content: center;
+         width: 50%;
+     }
+
+     .game-review-content {
+        font-family: 'Roboto', sans-serif;
         padding: 20px;
-        text-align: center;
-        width: 50%;
-        
+        text-align: left;
      }
 
      .game-rating-low {
@@ -255,4 +260,23 @@
       font-size: 64px;
   }
 
+}
+
+@media only screen and (min-width: 2095px) {
+   header {
+      min-height: 10vh;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+      background-color: black;
+    }
+
+   .game-list-section {
+      display: flex;
+      flex-direction: column;
+      height: 1295px;
+      overflow: scroll;
+      background-color: #91a3b0;
+   }
 }
