@@ -40,9 +40,9 @@
     <section class="game-list-section">
         <% for(const review of reviews) { %>
             <% for(const game of gameList) { %>
-                <% if(review.gameTitle == game.name) { %>
+                <% if(review.game == game.name) { %>
                     <div class="game-list-container">
-                        <h1 class="game-title"><%= review.gameTitle %></h1>
+                        <h1 class="game-title"><%= review.game %></h1>
                         <div class="img-container">
                             <img class="game-img" src="<%= game.img %>" alt="">
                         </div>
@@ -60,8 +60,8 @@
     </section>
     <section class="game-input-section">
         <form action="/" class="game-input-form" method="post">
-            <label for="gameTitle">Game</label>
-            <select name="gameTitle" id="game-title" required>
+            <label for="game">Game</label>
+            <select name="game" id="game-title" required>
                     <option value="" >select-one</option>
                 <% for(game of gameList) { %>
                     <option value="<%= game.name %>"><%= game.name %></option>
