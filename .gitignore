@@ -1,3 +1,7 @@
+
+# Images
+/public/images/*
+
 # Logs
 logs
 *.log

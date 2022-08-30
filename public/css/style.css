@@ -75,7 +75,7 @@
      .game-list-section {
         display: flex;
         flex-direction: column;
-        height: 250px;
+        height: 350px;
         overflow: scroll;
         background-color: #91a3b0;
      }
@@ -92,9 +92,7 @@
         font-family: 'Roboto', sans-serif;
      }
 
-     .img-container {
-      border: 3px solid red;
-     }
+  
      .game-img {
       width: 100%;
       height: 100%;
