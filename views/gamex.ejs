@@ -55,8 +55,8 @@
     </section>
     <section class="game-input-section">
         <form action="/" class="game-input-form" method="post">
-            <label for="game">Game</label>
-            <select name="game" id="game-title" required>
+            <label class="input-select-label" for="game">Game</label>
+            <select class="options" name="game" id="game-title" required>
                     <option value="" >select-one</option>
                 <% for(game of gameList) { %>
                     <option value="<%= game.name %>"><%= game.name %></option>
@@ -70,8 +70,8 @@
             placeholder="Give us your take"
             required
             ></textarea>
-            <label for="rating">Rating:</label>
-                <select name="rating" id="rating" required>
+            <label class="input-select-label" for="rating">Rating</label>
+                <select class="options" name="rating" id="rating" required>
                     <option value="">select-one</option>
                     <option value="0">0</option>
                     <option value="1">1</option>

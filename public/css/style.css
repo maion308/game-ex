@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Silkscreen:wght@400;700&display=swap');
 
-/* iphone 12 pro landscape/ */
-@media only screen and (max-width: 843px) {
+/* default/ */
+
     body {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
         background-color: #8a7f8d;
+        min-height: 100%;
     }
 
 /* ------------------------------Navigation Bar------------------------------ */
@@ -36,22 +37,38 @@
     }
 
     header {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-content: center;
-        background-color: black;
+      min-height: 20vh;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+      background-color: black;
+    }
+
+    select.options {
+      text-align: center;
+      height: 30px;
+    }
+
+    select.options:hover {
+      border: 3px solid yellow;
     }
 
     textarea {
-        resize: none;
+      resize: none;
+    }
+
+    textarea:hover {
+      border: 3px solid yellow;
     }
 
     hr {
       margin-top: 10px;
-      width: 50%;
+      width: 30%;
       box-shadow: 0px 0px 15px 5px yellow;
     }
+
+
 
     .menu-items {
         border: 3px solid orange;
@@ -77,19 +94,13 @@
 }
 
 /* ------------------------------Game List------------------------------ */
-     .game-list-section {
-        display: flex;
-        flex-direction: column;
-        height: 350px;
-        overflow: scroll;
-        background-color: #91a3b0;
-     }
 
      .game-list-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-bottom: 2px solid black;
+      border-bottom: 7px solid black;
+      background-color: white;
      }
 
      .game-title {
@@ -106,7 +117,7 @@
      }
 
      .img-container {
-         border: 1px solid black;
+         border: 1px solid green;
          background-color: black;
      }
 
@@ -114,12 +125,13 @@
          width: 100%;
          height: 100%;
          object-fit: contain;
-
      }
 
      .game-review {
         /* font-family: 'Roboto', sans-serif; */
         padding: 20px;
+        text-align: center;
+        width: 50%;
         
      }
 
@@ -214,25 +226,34 @@
         background-color: yellow;
      }
 
+@media only screen and (min-width: 300px) {
+   .game-list-section {
+      display: flex;
+      flex-direction: column;
+      height: 275px;
+      overflow: scroll;
+      background-color: #91a3b0;
+   }
+
+   .input-select-label {
+      text-align: center;
+      font-size: 32px;;
+  }
+
 }
 
-/* // Medium devices (tablets, 844px and up) */
-@media (min-width: 768px) {
-    body {
-        background-color: yellow;
-    }
-}
+@media only screen and (min-width: 843px) {
+   .game-list-section {
+      display: flex;
+      flex-direction: column;
+      height: 1075px;
+      overflow: scroll;
+      background-color: #91a3b0;
+   }
 
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    body {
-        background-color: green;
-    }
-}
+   .input-select-label {
+      text-align: center;
+      font-size: 64px;
+  }
 
-/* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    body {
-        background-color: orange;
-    }
 }
