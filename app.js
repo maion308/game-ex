@@ -3,6 +3,7 @@ import path from 'path'
 import {fileURLToPath} from 'url';
 import {gameList} from './gameList.js'
 import { GameList, Review}  from './mongoUtil.js'
+import alert from 'alert'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -38,9 +39,10 @@ app.get('/', (_req, res) => {
 
 app.post('/', (req, res) => {
     const result = req.body
-    console.log(result)
-    if(result === '') {res.redirect('/')}
-    else {
+    if(result.game === '' || result.review === '' || result.rating === '') {
+        alert('One or more required fields are missing')
+        res.redirect('/')
+    } else {
         const review = new Review(result)
         review.save()
         res.redirect('/')

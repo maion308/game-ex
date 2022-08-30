@@ -48,6 +48,7 @@
     select.options {
       text-align: center;
       height: 30px;
+      font-size: 1.5rem;
     }
 
     select.options:hover {
