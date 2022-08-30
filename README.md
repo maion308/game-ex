@@ -15,6 +15,11 @@ cd game-ex
 npm i
 ```
 
+# Instructions
+once you have the repository local on your machine, create a folder inside within the public folder and call it images.
+
+unzip the com.images.zip folder and move all the images into the images folder. The gameList.js file already has the proper images path set to the images folder if you  want to place the images elsewhere make sure to update the path in the gameList.js file
+
 ## Usage
 
 ```node
