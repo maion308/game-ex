@@ -199,15 +199,14 @@
      }
 
      .game-review-input {
-        padding: 7px;
-        margin: 0 3px;
         background-color: #8a7f8d;
         color: black;
         text-shadow: 0px 0px 5px yellow;
         border: none;
         border-bottom: 5px solid black;
         border-top: 5px solid black;
-        /* font-family: 'Silkscreen', cursive; */
+        font-size: 32px;
+        
      }
 
      .game-review-input:hover {
@@ -218,6 +217,10 @@
 
      .game-review-input::placeholder {
         color: black;
+        font-size: x-large;
+        text-align: center;
+        padding-top: 150px;
+        font-family: 'Silkscreen', cursive;
      }
 
      .game-review-input:focus {
