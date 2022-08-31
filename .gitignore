@@ -1,6 +1,5 @@
-
-# Images
-/public/images/*
+# zip folder of images
+com.images.zip
 
 # Credentials
 .env
