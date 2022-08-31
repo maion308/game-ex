@@ -1,6 +1,6 @@
 import { mongoose } from 'mongoose'
 import * as dotenv from 'dotenv' 
-dotenv.config()
+dotenv.config({path: './config.env'})
 const username = process.env.username;
 const pwd = process.env.password;
 
