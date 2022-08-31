@@ -1,11 +1,11 @@
 import { mongoose } from 'mongoose'
 import * as dotenv from 'dotenv' 
 dotenv.config()
+const username = process.env.username;
+const pwd = process.env.password;
 
-const srvr = process.env.N1_KEY; 
-const srvrCred = process.env.N1_SECRET; 
 
-mongoose.connect(`mongodb+srv://${srvr}:${srvrCred}@mike123.pjagw.mongodb.net/gamexpedia`)
+mongoose.connect('mongodb+srv://'+username+':'+pwd+'@mike123.pjagw.mongodb.net/gamexpedia')
 
 const gamesSchema = {
     name: String,
